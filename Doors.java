@@ -54,5 +54,7 @@ public class Doors {
 	public Date getInstallationDate() {
 		return installationDate;
 	}
-	
+	public void setInstallationDate(Date installationDate) {
+		this.installationDate = installationDate;
+	}
 }
