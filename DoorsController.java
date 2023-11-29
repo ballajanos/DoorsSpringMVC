@@ -18,7 +18,7 @@ public class DoorsController {
 	DoorsDao doorsDao = new DoorsDao();
 
     @GetMapping("/doors/{id}")
-    public ModelAndView watchPageById(@PathVariable int id) throws ClassNotFoundException, SQLException {
+    public ModelAndView doorsPageById(@PathVariable int id) throws ClassNotFoundException, SQLException {
         ModelAndView mav = new ModelAndView();
         try {
             Doors doors = doorsDao.getById(id);
@@ -39,7 +39,7 @@ public class DoorsController {
    
     
 	@GetMapping("/doors")
-	public ModelAndView getAllWacthes() throws ClassNotFoundException, SQLException{
+	public ModelAndView getAllDoors() throws ClassNotFoundException, SQLException{
 		ModelAndView mav=new ModelAndView("doors");
 		try {
 			ArrayList<Doors> doors=doorsDao.getAllDoors();
